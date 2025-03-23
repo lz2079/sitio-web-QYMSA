@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Estilos para el header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: #fff;
+    position: relative;
+}
+
+/* Estilos para el logo */
+.logoQYM {
+    width: auto;
+    height: auto;
+    transform: scale(1.15);
+}
+
+/* Estilos para el menú */
+.header__menu {
+    display: flex;
+    gap: 70px;
+}
+
+.header__menu__link {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.9rem;
+    font-weight: 650;
+    color: #E9762B;
+    text-decoration: none;
+}
+
+.header__menu__link.active {
+    color: #001965;
+    border-bottom: 2px solid #001965;
+}
+
+/* Estilos para la línea azul */
+.linea-azul {
+    width: 100%;
+    height: 7px;
+    background-color: #001965;
+    position: absolute;
+    top: 22%; /* Coloca la línea justo debajo del header */
+    left: 0;
+}
+
+/* Contenedor principal */
+.contenedor-principal {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    position: relative;
+}
+
+/* Estilos para la imagen */
+.contenedor-imagen {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.fotoindex {
+    transform: scale(0.8);
+    width: auto;
+}
+
+/* Contenedor del contenido */
+.contenido {
+    flex: 2;
+}
+
+/* Estilos específicos para servicios.html */
+.pagina-servicios .contenido h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.5rem;
+    color: #001965;
+    margin-bottom: 20px;
+}
+
+.pagina-servicios .contenido p,
+.pagina-servicios .contenido ul {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.pagina-servicios .contenido ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.pagina-servicios .contenido ul li {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #333;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Estilos específicos para index.html */
+.pagina-index .contenido h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.5rem;
+    color: #001965;
+    margin-bottom: 20px;
+}
+
+.pagina-index .contenido p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.75;
+}
+
+.pagina-empresa .contenido h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.5rem;
+    color: #001965;
+    margin-bottom: 20px;
+}
+
+.pagina-empresa .contenido p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.75;
+}
+
+.pagina-equipo .contenido h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.5rem;
+    color: #001965;
+    margin-bottom: 20px;
+}
+
+.pagina-equipo .contenido p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.pagina-contacto .contenido h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.5rem;
+    color: #001965;
+    margin-bottom: 20px;
+}
+
+.pagina-contacto .contenido p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.resaltar {
+    color: #E9762B;
+    font-weight: bold;
+}
+
+.contenido-index {
+    font-family: "Montserrat", sans-serif;
+}
+
+.texto-index {
+    line-height: 2.5;
+    margin-top: 70px;
+}
+
+/* Animación para mover el contenido */
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Clase para aplicar la animación */
+.slide-out {
+    animation: slideOut 0.5s forwards;
+}
+
+.slide-in {
+    animation: slideIn 0.5s forwards;
+}
