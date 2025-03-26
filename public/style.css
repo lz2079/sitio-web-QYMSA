@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 /* Estilos para el header */
 .header {
@@ -35,9 +35,10 @@
 }
 
 .header__menu__link {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-style: normal;
     font-size: 1.3rem;
-    font-weight: 650;
     color: #3F7D58; /* Color naranja de tu marca */
     text-decoration: none;
 }
@@ -98,7 +99,9 @@ body {
 }
 
 .contenido-index {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .texto-index {
@@ -107,7 +110,9 @@ body {
 }
 
 .pagina-index .contenido p {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     font-size: 1.2rem;
     color: #333;
     margin-bottom: 20px;
@@ -116,7 +121,9 @@ body {
 
 /* Estilos específicos para index.html */
 .pagina-index .contenido h1 {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-style: normal;
     font-size: 1.75rem;
     color: #143D60;
     margin-bottom: 20px;
@@ -130,11 +137,13 @@ body {
     margin-top: 70px;
     color: #143D60;
     margin-bottom: 20px;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
 }
 
 .pagina-empresa .contenido h2 {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
     font-size: 1.5rem;
     color: #143D60;
     margin-bottom: -10px;
@@ -146,7 +155,8 @@ body {
 }
 
 .pagina-empresa .contenido p {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
     font-size: 1.2rem;
     color: #333;
     margin-bottom: 20px;
@@ -155,7 +165,8 @@ body {
 
 /* Estilos específicos para servicios.html */
 .pagina-servicios .contenido h1 {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
     font-size: 1.75rem;
     color: #143D60;
     margin-bottom: 20px;
@@ -164,7 +175,8 @@ body {
 
 .pagina-servicios .contenido p,
 .pagina-servicios .contenido ul {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
     font-size: 1.2rem;
     color: #333;
     margin-bottom: 20px;
@@ -184,7 +196,8 @@ body {
 }
 
 .pagina-equipo .contenido h1 {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
     font-size: 1.75rem;
     color: #143D60;
     margin-bottom: 20px;
@@ -192,14 +205,16 @@ body {
 }
 
 .pagina-equipo .contenido h2 {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
     font-size: 1.5rem;
     color: #143D60;
 
 }
 
 .pagina-equipo .contenido h3 {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
     font-size: 1.5rem;
     color: #143D60;
     margin-bottom: -10px;
@@ -215,7 +230,8 @@ body {
 
 .cliente {
     padding: 10px;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
     font-size: 1rem;
     color: #333;
     border-left: 3px solid #EB5B00; /* Acuerdo naranja */
@@ -230,7 +246,8 @@ body {
 
 
 .pagina-equipo .contenido p {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
     font-size: 1.2rem;
     color: #333;
     margin-bottom: 20px;
@@ -238,7 +255,8 @@ body {
 }
 
 .pagina-contacto .contenido h1 {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
     font-size: 1.75rem;
     color: #143D60;
     margin-bottom: 20px;
@@ -246,7 +264,8 @@ body {
 }
 
 .pagina-contacto .contenido p {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
     font-size: 1.2rem;
     color: #333;
     margin-bottom: 20px;
