@@ -45,7 +45,7 @@
     font-weight: 700;
     font-style: normal;
     font-size: 1.3rem;
-    color: #3F7D58; /* Color naranja de tu marca */
+    color: #3F7D58; 
     text-decoration: none;
 }
 
@@ -56,11 +56,16 @@
 
 body {
     padding-top: 175px; /* Mismo valor que la altura del header */
-
+    margin: 0; /* Esto elimina los márgenes predeterminados del body */
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Previene barras de desplazamiento horizontales */
+    
 }
 
 /* Contenedor principal */
 .contenedor-principal {
+    margin-top: 190px; /* Ajusta este valor según necesites */
     display: flex;
     align-items: flex-start;
     gap: 20px;
@@ -280,6 +285,31 @@ body {
     line-height: 1.75;
 }
 
+/* Estilos para el footer centrado */
+.footer {
+    background-color: white; /* Color de fondo */
+    width: 100%;
+    padding: 1rem 0;
+    margin-top: 1rem;
+    box-sizing: border-box;
+    border-top: 3px solid #EB5B00; /* Línea separadora sutil */
+}
+
+.footer__contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.footer__info p {
+    margin: 0;
+    color: #143D60;
+    font-family: var(--fuente-texto);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
 /* Animación para mover el contenido */
 @keyframes slideOut {
     from {
@@ -310,3 +340,4 @@ body {
 .slide-in {
     animation: slideIn 0.5s forwards;
 }
+
