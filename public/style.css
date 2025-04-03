@@ -11,7 +11,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #DDEB9D; /* Color de fondo */
+    background-color: rgba(255, 255, 255, 0.85); /* Color de fondo */
     width: 100%; /* Ocupa todo el ancho */
     padding: 10px 5%;
     position: fixed; /* Fija en la parte superior */
@@ -19,17 +19,29 @@
     left: 0; /* Pegado al borde izquierdo */
     z-index: 1000; /* Asegura que esté por encima de otros elementos */
     margin: 0; /* Elimina márgenes por defecto */
-    box-shadow: 0 2px 5px #A0C878; /* Sombra opcional para mejor visualización */
+    border-bottom: 6px solid #143D60; /* Línea sólida (ajusta color/grosor) */
+    min-height: 125px; /* Altura flexible */
 }
 
 /* Estilos para el logo */
 .logoQYM {
     width: auto;
     height: auto;
-    transform: scale(1);
+    transform: scale(1.5); /* Escala el logo */
     position: relative;  /* Permite ajustar la posición */
-    left: 225px;         
+    left: 150px;         
     top: 2px;          /* Mueve el logo hacia arriba 7px */
+}
+
+.frase_header {
+    font-family: var(--fuente-texto);
+    font-weight: 400;
+    font-style: italic;
+    font-size: 1.4rem;
+    color: #143D60; /* Color azul de tu marca */
+    margin-right: 200px; /* Espacio entre el logo y la frase */
+    position: relative; /* Permite moverla con top/left */
+    top: 35px; /* Mueve hacia abajo */
 }
 
 /* Estilos para el menú */
@@ -37,7 +49,7 @@
     display: flex;
     gap: 40px;
     position: relative;  /* Permite ajustar la posición */
-    left: -515px;
+    left: -325px;
 }
 
 .header__menu__link {
@@ -45,13 +57,15 @@
     font-weight: 700;
     font-style: normal;
     font-size: 1.3rem;
-    color: #3F7D58; 
+    color: #143D60; /* Color naranja de tu marca */
     text-decoration: none;
+    position: relative; /* Permite moverlos con top/left */
+    top: 35px; /* Mueve hacia abajo */
 }
 
 .header__menu__link.active {
-    color: #143D60; /* Color azul de tu marca */
-    border-bottom: 2px solid #143D60; /* Línea azul en la parte inferior */
+    color: #EB5B00; /* Color azul de tu marca */
+    border-bottom: 2px solid #EB5B00; /* Línea azul en la parte inferior */
 }
 
 body {
@@ -65,13 +79,14 @@ body {
 
 /* Contenedor principal */
 .contenedor-principal {
-    margin-top: 190px; /* Ajusta este valor según necesites */
+    margin-top: 150px; /* Ajusta este valor según necesites */
     display: flex;
     align-items: flex-start;
     gap: 20px;
-    padding: 50px;
+    padding: 75px;
     position: relative;
     overflow: hidden; /* Asegura que el contenido que se desplace no cause scroll */
+    
 }
 
 /* Con esto: */
@@ -81,21 +96,26 @@ body {
     align-items: flex-start; /* Puedes usar 'center' para alinear todas al centro */
     margin-left: auto;
     position: relative; /* Permite ajustar la posición */
-    bottom: 85px; /* Mueve la imagen hacia abajo 75px */
+    bottom: 95px; /* Mueve la imagen hacia abajo 75px */
+    left: -160px; /* Mueve la imagen hacia la derecha 20px */          
     padding-top: 0px; /* Espacio consistente desde arriba */
 }
 
 .fotoindex, .fotoempresa, .fotoservicios, .fotoequipo, .fotocontacto {
-    transform: scale(0.7); /* Escala la imagen al 60% */
+    transform: scale(0.8); /* Escala la imagen % */
     width: auto;
-    border: 10px solid #143D60; /* Color azul de tu marca */
-    border-radius: 8px;
-    box-shadow: 
-        0 4px 12px rgba(0, 0, 0, 0.1), /* Sombra exterior */
-        inset 0 0 0 2px #EB5B00; /* Borde interior naranja */
-    padding: 2px;
     background: white;
     transition: all 0.3s ease; /* Suaviza los efectos al pasar el mouse */
+}
+
+.fotoindex {
+    filter: grayscale(100%);
+    transition: filter 0.5s;
+}
+
+.fotoindex:hover {
+    filter: grayscale(0%);
+    transform: scale(1.05); /* Escala la imagen al pasar el mouse */
 }
 
 /* Contenedor del contenido */
@@ -104,6 +124,8 @@ body {
     display: flex;
     flex-direction: column;
     position: relative; /* Necesario para la animación */
+    max-width: 650px; /* Cambia este valor (ej: 600px para más estrecho) */
+    margin-left: 150px;
 }
 
 .resaltar {
@@ -118,7 +140,7 @@ body {
 }
 
 .texto-index {
-    line-height: 1.75;
+    line-height: 1.55;
     margin-top: 70px;
 }
 
@@ -129,7 +151,7 @@ body {
     font-size: 1.2rem;
     color: #333;
     margin-bottom: 20px;
-    line-height: 1.75;
+    line-height: 1.55;
 }
 
 /* Estilos específicos para index.html */
@@ -139,10 +161,19 @@ body {
     font-style: normal;
     font-size: 1.75rem;
     color: #143D60;
-    margin-bottom: 0px;
+    margin-bottom: 20px;
     margin-top: 0px;
 }
 
+.pagina-index .contenido ul {
+    font-family: var(--fuente-texto);
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.55;
+
+}
 
 /* Estilos específicos para empresa.html */
 .pagina-empresa .contenido h1{
@@ -152,6 +183,7 @@ body {
     margin-bottom: 0px;
     font-family: var(--fuente-texto);
     font-weight: 600;
+    margin-bottom: 20px;
 }
 
 .pagina-empresa .contenido h2 {
@@ -173,7 +205,7 @@ body {
     font-size: 1.2rem;
     color: #333;
     margin-bottom: 20px;
-    line-height: 1.75;
+    line-height: 1.55;
 }
 
 /* Estilos específicos para servicios.html */
@@ -193,7 +225,7 @@ body {
     font-size: 1.2rem;
     color: #333;
     margin-bottom: 20px;
-    line-height: 1.75;
+    line-height: 1.55;
 }
 
 .pagina-servicios .contenido ul {
@@ -264,7 +296,7 @@ body {
     font-size: 1.2rem;
     color: #333;
     margin-bottom: 20px;
-    line-height: 1.75;
+    line-height: 1.55;
 }
 
 .pagina-contacto .contenido h1 {
@@ -282,7 +314,7 @@ body {
     font-size: 1.2rem;
     color: #333;
     margin-bottom: 20px;
-    line-height: 1.75;
+    line-height: 1.55;
 }
 
 /* Estilos para el footer centrado */
