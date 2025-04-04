@@ -4,6 +4,7 @@
 
 :root{
     --fuente-texto: "Lato", sans-serif;
+    font-size: 16px; /* Base para unidades rem */
 }
 
 /* Estilos para el header */
@@ -11,9 +12,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
     background-color: rgba(255, 255, 255, 0.85); /* Color de fondo */
     width: 100%; /* Ocupa todo el ancho */
-    padding: 10px 5%;
+    padding: 0.625rem 5%;
     position: fixed; /* Fija en la parte superior */
     top: 0; /* Pegado al borde superior */
     left: 0; /* Pegado al borde izquierdo */
@@ -45,10 +47,9 @@
     font-family: var(--fuente-texto);
     font-weight: 600;
     font-style: italic;
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 2vw, 1rem); /* Tamaño flexible */
     color: #143D60; /* Color azul de tu marca */
     position: relative; /* Permite moverla con top/left */
-    
     margin: 0; /* Elimina márgenes por defecto de h1 y h2 */
     line-height: 1.3; /* Controla el espacio entre líneas */
 }
@@ -59,6 +60,8 @@
     gap: 40px;
     position: relative;  /* Permite ajustar la posición */
     left: -325px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .header__menu__link {
@@ -88,14 +91,44 @@ body {
 
 /* Contenedor principal */
 .contenedor-principal {
+    flex-direction: row;
+    flex-wrap: wrap;
     margin-top: 150px; /* Ajusta este valor según necesites */
     display: flex;
     align-items: flex-start;
     gap: 20px;
-    padding: 75px;
     position: relative;
     overflow: hidden; /* Asegura que el contenido que se desplace no cause scroll */
+    display: flex;
+    justify-content: center; /* Centra el contenido en pantallas grandes */
+    max-width: 1400px; /* Limita el ancho máximo */
+    margin: 150px auto 0; /* Centrado horizontal */
+    padding: 75px 50px;
     
+}
+
+/* AÑADE ESTOS MEDIA QUERIES (nuevos) */
+@media (max-width: 1200px) {
+    .contenedor-principal {
+        padding: 50px;
+    }
+}
+
+@media (max-width: 992px) {
+    .contenedor-principal {
+        flex-direction: column; /* Cambia a columna en tablets */
+        align-items: center; /* Centra los elementos */
+        padding: 30px;
+        margin-top: 180px; /* Ajuste por el header responsivo */
+    }
+}
+
+@media (max-width: 768px) {
+    .contenedor-principal {
+        padding: 20px;
+        margin-top: 160px;
+        gap: 15px;
+    }
 }
 
 /* Con esto: */
@@ -108,12 +141,20 @@ body {
     bottom: 95px; /* Mueve la imagen hacia abajo 75px */
     left: -95px; /* Mueve la imagen hacia la derecha 20px */          
     padding-top: 0px; /* Espacio consistente desde arriba */
+    flex: 0 0 40%; /* No crece más del 40% del espacio */
+    min-width: 250px; /* Ancho mínimo */
 }
 
 .fotoindex, .fotoservicios, .fotoequipo, .fotocontacto {
+    
+    width: auto; /* Permite que la imagen mantenga su proporción */
+    max-width: 100%; /* Asegura que la imagen no exceda el contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
     transform: scale(0.8); /* Escala la imagen % */
-    width: auto;
+    transform-origin: center; /* Asegura que el escalado sea desde el centro */
+    display: block; /* Mejor control del flujo */
     background: white;
+    margin: 0 auto; /* Centrado horizontal */
     transition: all 0.3s ease; /* Suaviza los efectos al pasar el mouse */
 }
 
@@ -161,6 +202,11 @@ body {
     color: #333;
     margin-bottom: 20px;
     line-height: 1.55;
+    
+    word-break: break-word; /* Evita desbordamiento horizontal */
+    white-space: normal; /* Asegura comportamiento normal */
+    word-wrap: normal; /* Permite que las palabras largas no se dividan */
+    overflow-wrap: normal; /* Similar a word-wrap pero más moderno */
 }
 
 /* Estilos específicos para index.html */
@@ -192,6 +238,7 @@ body {
         margin-top: 110px;
         margin-bottom: 90px;
         transform: scale (1); /* Escala la imagen % */
+        left: -475px !important; 
     }
 
 .pagina-empresa .contenido h1{
@@ -391,3 +438,139 @@ body {
     animation: slideIn 0.5s forwards;
 }
 
+/* Dispositivos grandes (desktops, 1200px y más) */
+@media (max-width: 1200px) {
+    .header {
+        padding: 10px 3%;
+    }
+    .logoQYM {
+        left: 50px;
+        transform: scale(1.2);
+    }
+    .titulos-header {
+        margin-right: 100px;
+    }
+    .header__menu {
+        left: -200px;
+        gap: 30px;
+    }
+}
+
+/* Dispositivos medianos (tablets, 768px - 992px) */
+@media (max-width: 992px) {
+    .header {
+        flex-direction: column;
+        padding: 15px 5%;
+        min-height: auto;
+    }
+    .logoQYM {
+        position: static;
+        transform: scale(1);
+        margin-bottom: 15px;
+    }
+    .titulos-header {
+        margin: 15px 0;
+        text-align: center;
+        position: static;
+    }
+    .header__menu {
+        position: static;
+        justify-content: center;
+        margin-top: 15px;
+    }
+    .contenedor-principal {
+        flex-direction: column;
+        padding: 20px;
+        margin-top: 180px;
+    }
+    .contenido {
+        margin-left: 0;
+        max-width: 100%;
+    }
+    .contenedor-imagen {
+        margin: 20px auto;
+        position: static;
+        width: 100%;
+        max-width: 500px; /* Ajusta según necesidad */
+        height: auto;
+        flex: 0 0 40%; /* No crece más del 40% del espacio */
+        min-width: 250px; /* Ancho mínimo */
+    }
+}
+
+/* Dispositivos pequeños (phones, 576px - 768px) */
+@media (max-width: 768px) {
+    body {
+        padding-top: 220px;
+    }
+    .header__menu {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    .header__menu__link {
+        font-size: 1rem;
+        top: 0;
+    }
+    .contenedor-principal {
+        margin-top: 100px;
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    }
+    .lista-clientes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Dispositivos muy pequeños (phones, menos de 576px) */
+@media (max-width: 576px) {
+    .frase_header {
+        font-size: 0.9rem;
+    }
+    .pagina-index .contenido p,
+    .pagina-empresa .contenido p,
+    .pagina-servicios .contenido p,
+    .pagina-equipo .contenido p,
+    .pagina-contacto .contenido p {
+        font-size: 1rem;
+        hyphens: auto; /* Permite división de palabras en móviles */
+    }
+    .lista-clientes {
+        grid-template-columns: 1fr;
+    }
+    .fotoindex, .fotoservicios, .fotoequipo, .fotocontacto {
+        transform: scale(0.7);
+    }
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 992px) {
+    .fotoindex, .fotoservicios, .fotoequipo, .fotocontacto {
+        transform: scale(0.7); /* Escala ligeramente menor en tablets */
+    }
+}
+
+@media (max-width: 576px) {
+    .fotoindex, .fotoservicios, .fotoequipo, .fotocontacto {
+        transform: scale(0.6); /* Escala más pequeña en móviles */
+    }
+}
+
+/* Contenedor de texto más estrecho y responsivo */
+.pagina-index .contenido {
+    max-width: 650px; /* Reduje de 650px a 550px (ajustable) */
+    margin-left: 100px; /* Reduje de 150px para compensar */
+    flex: 1 1 55%; /* Permite crecer pero con base del 55% del espacio */
+    min-width: 300px; /* Ancho mínimo para móviles */
+    width: auto; /* Se ajusta naturalmente */
+}
+
+/* Ajustes para tablets */
+@media (max-width: 992px) {
+    .pagina-index .contenido {
+        max-width: 100%; /* Ocupa todo el ancho disponible */
+        margin-left: 0;
+        padding: 0 20px; /* Añade espacio a los lados */
+    }
+}
